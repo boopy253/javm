@@ -115,7 +115,7 @@ javm() {
       if [ ! -f "$raw/bin/java" ] && [ ! -f "$raw/bin/java.exe" ]; then
         echo "Error: Directory does not contain bin/java(.exe): $raw" >&2
         return 1
-      }
+      fi
       local win_path unix_path tmp
       unix_path="$raw"
       win_path=$(__javm_to_windows "$unix_path")
